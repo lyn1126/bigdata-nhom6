@@ -1,6 +1,6 @@
 # Ứng dụng phân tích dữ liệu lớn để phân khúc khách hàng và dự báo rủi ro giao hàng trễ trên sàn thương mại điện tử Olist (Brazil)
 
-Project cuối kỳ học phần Big Data – Nhóm 6.
+Đồ án cuối kỳ học phần Big Data – Nhóm 6.
 
 - **Dữ liệu:** [Brazilian E-Commerce Public Dataset by Olist](https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce) (Kaggle, giấy phép CC BY-NC-SA 4.0), khoảng 100.000 đơn hàng, giai đoạn 2016–2018.
 - **Nội dung chính:** lưu trữ và truy vấn dữ liệu trên MongoDB, làm sạch và khám phá dữ liệu, phân khúc khách hàng bằng RFM + K-means, dự báo đơn giao trễ bằng học máy (CatBoost, XGBoost, LightGBM, Gradient Boosting...).
@@ -23,18 +23,19 @@ Project cuối kỳ học phần Big Data – Nhóm 6.
 └── report/                       # báo cáo Word/PDF
 ```
 
+
 ## Thứ tự chạy
 
-Bấm vào nút để mở trực tiếp trên Google Colab (thay `<tài-khoản>` và `<repo>` bằng thông tin repo của nhóm).
+Bấm vào nút để mở trực tiếp trên Google Colab.
 
 | Bước | Notebook | Mục đích | Mở trên Colab |
 |---|---|---|---|
-| 1 | `01_kiem_tra_du_lieu` | Kiểm tra chất lượng ban đầu của 9 bảng dữ liệu | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tài-khoản>/<repo>/blob/main/notebooks/01_kiem_tra_du_lieu.ipynb) |
-| 2 | `02_eda` | Làm sạch, tạo biến dẫn xuất, phân tích khám phá, xuất `olist_clean.csv` | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tài-khoản>/<repo>/blob/main/notebooks/02_eda.ipynb) |
-| 3 | `03_rfm_k-means` | Phân khúc khách hàng RFM + K-means | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tài-khoản>/<repo>/blob/main/notebooks/03_rfm_k-means.ipynb) |
-| 4 | `04_hoc_may` | Dự báo rủi ro giao hàng trễ, temporal backtesting, Future Test | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tài-khoản>/<repo>/blob/main/notebooks/04_hoc_may.ipynb) |
-| 5 | `05_import_mongodb` | Nạp dữ liệu vào MongoDB Atlas (6 collection) | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tài-khoản>/<repo>/blob/main/notebooks/05_import_mongodb.ipynb) |
-| 6 | `06_truy_van_mongodb` | CRUD và Aggregation Pipeline trên MongoDB | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/<tài-khoản>/<repo>/blob/main/notebooks/06_truy_van_mongodb.ipynb) |
+| 1 | `01_kiem_tra_du_lieu` | Kiểm tra chất lượng ban đầu của 9 bảng dữ liệu | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lyn1126/bigdata-nhom6/blob/main/notebooks/01_kiem_tra_du_lieu.ipynb) |
+| 2 | `02_eda` | Làm sạch, tạo biến dẫn xuất, phân tích khám phá, xuất `olist_clean.csv` | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lyn1126/bigdata-nhom6/blob/main/notebooks/02_eda.ipynb) |
+| 3 | `03_rfm_k-means` | Phân khúc khách hàng RFM + K-means | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lyn1126/bigdata-nhom6/blob/main/notebooks/03_rfm_k-means.ipynb) |
+| 4 | `04_hoc_may` | Dự báo rủi ro giao hàng trễ, temporal backtesting, Future Test | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lyn1126/bigdata-nhom6/blob/main/notebooks/04_hoc_may.ipynb) |
+| 5 | `05_import_mongodb` | Nạp dữ liệu vào MongoDB Atlas (6 collection) | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lyn1126/bigdata-nhom6/blob/main/notebooks/05_import_mongodb.ipynb) |
+| 6 | `06_truy_van_mongodb` | CRUD và Aggregation Pipeline trên MongoDB | [![Open](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lyn1126/bigdata-nhom6/blob/main/notebooks/06_truy_van_mongodb.ipynb) |
 
 Các bước 3 và 4 độc lập với nhau, chỉ cần có `olist_clean.csv` (từ bước 2). Nhánh MongoDB (bước 5–6) chạy riêng, không ảnh hưởng đến bước 1–4.
 
