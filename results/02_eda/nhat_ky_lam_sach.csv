@@ -1,0 +1,18 @@
+﻿Mã,Bảng,Vấn đề,Số dòng,Cách xử lý,Lý do
+A1,"orders, items, reviews",Cột ngày ở dạng chuỗi,0,Chuyển sang datetime,"Cần để so sánh, nhóm theo tháng, tính số ngày"
+A2,"customers, sellers",Mã bang không hợp lệ sau khi chuẩn hóa,0,"Chuẩn hóa chữ hoa, bỏ khoảng trắng","Phân tích theo bang là trọng tâm của Q2, Q6"
+B1,geolocation,Dòng trùng nguyên văn,261831,Xóa,Không thêm thông tin; làm lệch trọng số khi lấy trung vị theo zip
+B2,geolocation,Tọa độ ngoài khung Brazil,33,Xóa,Tạo khoảng cách vô lý; khung chỉ là hộp xấp xỉ nên kiểm tra lại khoảng cách tối đa
+B3,geolocation,Nhiều điểm cho một mã zip,719289,Gộp một dòng mỗi zip bằng trung vị,Trung vị ít bị kéo lệch bởi điểm sai
+C1,orders,Thiếu ngày giao khách,2965,Giữ NULL,Thiếu nghĩa là chưa giao hoặc đã hủy; điền ngày là bịa dữ liệu
+C2,orders,delivered nhưng thiếu ngày giao,8,"Gắn cờ, loại khỏi tập is_late",Không xác định được trễ hay không
+C3,orders,Giao cho vận chuyển trước ngày mua,166,"Gắn cờ, giữ nguyên",Không dùng cho is_late; nằm trong danh sách cột cấm của mô hình
+C4,orders,Khách nhận trước khi vận chuyển nhận,23,"Gắn cờ, giữ nguyên",Không biết ngày nào sai nên không sửa
+C5,orders,Không phải delivered nhưng có ngày giao khách,6,"Gắn cờ, loại khỏi tập is_late",is_late chỉ định nghĩa cho đơn đã giao
+D1,payments,Giá trị ≤ 0 hoặc loại not_defined,9,"Gắn cờ, giữ nguyên",Một đơn có nhiều khoản; xóa một khoản làm sai tổng thanh toán
+D2,payments,Số kỳ trả góp bằng 0,2,Sửa thành 1,Trả một lần tương đương 1 kỳ
+E1,products,Thiếu tên danh mục,610,Gán 'unknown',Giữ doanh thu của các sản phẩm này trong phân tích theo danh mục
+E2,products,Cân nặng bằng 0,4,Đổi thành NULL,Sản phẩm không thể nặng 0 g
+F1,reviews,Đơn có nhiều hơn 1 review,547,"Lấy review mới nhất, lưu n_reviews",Trung bình các review khác nhau không phải điểm thật của khách
+F2,reviews,review_id bị lặp,814,Giữ tất cả dòng,Không phải dòng trùng nguyên văn; xóa theo review_id có thể mất đánh giá thật
+G1,olist_clean,Thiếu khoảng cách (không có món hàng hoặc mã zip không có tọa độ),1267,"Giữ NaN, thêm cờ distance_missing",Không tự điền khoảng cách
