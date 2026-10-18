@@ -1,4 +1,4 @@
-# Ứng dụng phân tích dữ liệu lớn để phân khúc khách hàng và dự báo rủi ro giao hàng trễ trên sàn thương mại điện tử Olist (Brazil)
+# Ứng dụng Big Data để phân tích phân khúc khách hàng và dự báo rủi ro giao hàng trễ trên sàn thương mại điện tử Olist (Brazil)
 
 Đồ án cuối kỳ học phần Big Data – Nhóm 6.
 
@@ -60,5 +60,8 @@ Các bước 3 và 4 độc lập với nhau, chỉ cần có `olist_clean.csv` 
 ## Thành viên nhóm
 
 | Họ và tên | MSSV | Nhiệm vụ |
-|---|---|---|
-| ... | ... | ... |
+|Lê Yến Ngân|24126144|Import và truy vấn MongoDB, Khám phá và làm sạch dữ liệu (EDA), phân tích phân khúc khách hàng bằng RFM và K-means, Xây dựng và triển khai mô học máy, Chương 5, Tổng hợp word.|
+|Hà Kiều Khanh|24126095|Chương 1, Import Mongodb, Dashboard Báo cáo hiệu suất giao hàng và phân tích rủi ro, Chương 6.|
+|Nguyễn Đào Thanh Ngân|24126145|Chương 2, Truy vấn Mongodb, Dashboard Phân khúc khách hàng bằng RFM và K-means trên Power BI, Chương 6, Chương 7|
+|Nguyễn Thị Kim Ngân|24126146|Chương 3 Mô tả dữ liệu, Phân tích phân khúc khách hàng bằng RFM và K-means,  Dashboard Báo cáo hiệu suất giao hàng và phân tích rủi ro, Chương 7.|
+|Nguyễn Thị Thanh Giang|24126049|Chương 3, Phân tích và khám phá dữ liệu (EDA), Dashboard Kết quả machine learning và đánh giá khách hàng, Chương 6|
